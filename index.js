@@ -20,7 +20,7 @@ http.createServer(function (req, res) {
       hostname: wskService,
       port: 80,
       auth: wskAuth,
-      method: POST
+      method: 'POST'
     };
 
     let req = http.request(options, (res) => {
