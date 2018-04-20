@@ -11,7 +11,7 @@ http.createServer(function (req, res) {
   req.on('data', (chunk) => {
     body.push(chunk);
   }).on('end', () => {
-    let body = Buffer.concat(body).toString();
+    body = Buffer.concat(body).toString();
     console.log(body);
     res.writeHead(200, {'Content-Type': 'text/json'});
     res.end(); //end the response
